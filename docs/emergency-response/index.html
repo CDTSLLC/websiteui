@@ -13,7 +13,7 @@
       background: transparent;
     }
 
-    /* Center content inside the iframe */
+    /* Center the button inside the iframe */
     body {
       display: flex;
       justify-content: center;
@@ -30,13 +30,14 @@
       /* Responsive width: shrink on small screens, cap on large */
       width: min(90vw, 300px);
 
-      /* Maintain image aspect ratio (tuned for your long button) */
+      /* Maintain aspect ratio for the long button */
       height: calc(min(90vw, 300px) * 0.213);
 
+      display: block;
       background: url("Request-Emergency-Service-button-long.png") center / contain no-repeat;
+
       cursor: pointer;
       touch-action: manipulation;
-
       transition: filter 0.08s ease, transform 0.08s ease;
     }
 
