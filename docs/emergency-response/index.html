@@ -13,7 +13,7 @@
       background: transparent;
     }
 
-    /* Center the button inside the iframe */
+    /* Center content inside the iframe */
     body {
       display: flex;
       justify-content: center;
@@ -23,21 +23,30 @@
     a {
       display: inline-block;
       text-decoration: none;
-      line-height: 0; /* prevents stray inline spacing */
+      line-height: 0;
     }
 
     .btn {
-      width: 300px;   /* adjust as needed */
-      height: 64px;   /* adjust as needed */
-      display: block; /* CRITICAL: span needs this */
+      /* Responsive width: shrink on small screens, cap on large */
+      width: min(90vw, 300px);
+
+      /* Maintain image aspect ratio (tuned for your long button) */
+      height: calc(min(90vw, 300px) * 0.213);
+
       background: url("Request-Emergency-Service-button-long.png") center / contain no-repeat;
       cursor: pointer;
       touch-action: manipulation;
+
       transition: filter 0.08s ease, transform 0.08s ease;
     }
 
-    .btn:hover { filter: brightness(1.12); }
-    .btn:active { transform: translateY(2px) scale(0.98); }
+    .btn:hover {
+      filter: brightness(1.12);
+    }
+
+    .btn:active {
+      transform: translateY(2px) scale(0.98);
+    }
   </style>
 </head>
 
