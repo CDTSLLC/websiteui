@@ -23,24 +23,21 @@
     a {
       display: inline-block;
       text-decoration: none;
+      line-height: 0; /* prevents stray inline spacing */
     }
 
     .btn {
-      width: 300px; /* adjust if your long button needs more room */
-      height: 64px;
+      width: 300px;   /* adjust as needed */
+      height: 64px;   /* adjust as needed */
+      display: block; /* CRITICAL: span needs this */
       background: url("Request-Emergency-Service-button-long.png") center / contain no-repeat;
       cursor: pointer;
       touch-action: manipulation;
       transition: filter 0.08s ease, transform 0.08s ease;
     }
 
-    .btn:hover {
-      filter: brightness(1.12);
-    }
-
-    .btn:active {
-      transform: translateY(2px) scale(0.98);
-    }
+    .btn:hover { filter: brightness(1.12); }
+    .btn:active { transform: translateY(2px) scale(0.98); }
   </style>
 </head>
 
