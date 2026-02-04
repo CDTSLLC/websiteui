@@ -27,14 +27,14 @@
     }
 
     .btn {
-      /* Responsive width: shrink on small screens, cap on large */
+      /* Canonical sizing for all long buttons */
       width: min(90vw, 300px);
-
-      /* Maintain aspect ratio for the long button */
-      height: calc(min(90vw, 300px) * 0.213);
+      height: calc(min(90vw, 300px) * 0.12668);
 
       display: block;
-      background: url("Request-Emergency-Service-button-long.png") center / contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
 
       cursor: pointer;
       touch-action: manipulation;
@@ -58,7 +58,10 @@
     rel="noopener"
     aria-label="Request Emergency Service"
   >
-    <span class="btn"></span>
+    <span
+      class="btn"
+      style="background-image: url('Request-Emergency-Service-button-long.png');"
+    ></span>
   </a>
 </body>
 </html>

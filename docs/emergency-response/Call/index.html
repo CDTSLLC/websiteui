@@ -27,25 +27,39 @@
     }
 
     .btn {
+      /* Canonical sizing for all long buttons */
       width: min(90vw, 300px);
-      height: calc(min(90vw, 300px) * 0.213);
+      height: calc(min(90vw, 300px) * 0.12668);
 
       display: block;
-      background: url("Call-Request-Emergency-Service-button-long.png") center / contain no-repeat;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
 
       cursor: pointer;
       touch-action: manipulation;
       transition: filter 0.08s ease, transform 0.08s ease;
     }
 
-    .btn:hover { filter: brightness(1.12); }
-    .btn:active { transform: translateY(2px) scale(0.98); }
+    .btn:hover {
+      filter: brightness(1.12);
+    }
+
+    .btn:active {
+      transform: translateY(2px) scale(0.98);
+    }
   </style>
 </head>
 
 <body>
-  <a href="tel:+17039294166" aria-label="Call Crown Down Tree Service">
-    <span class="btn"></span>
+  <a
+    href="tel:+17039294166"
+    aria-label="Call Crown Down Tree Service"
+  >
+    <span
+      class="btn"
+      style="background-image: url('Call-Request-Emergency-Service-button-long.png');"
+    ></span>
   </a>
 </body>
 </html>
